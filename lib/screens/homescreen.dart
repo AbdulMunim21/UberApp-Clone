@@ -553,7 +553,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       'longitude': dropoff.longitude,
     };
 
-    var rideInfoMap = {
+    var riderInfoMap = {
       'created_at': DateTime.now().toString(),
       'driver_id': 'waiting',
       'payment_method': 'cash',
@@ -565,11 +565,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       'dropOff_address': dropoff.placeFormatAddress,
     };
 
-    print(rideInfoMap);
+    print(riderInfoMap);
     FirebaseFirestore.instance
         .collection('riderRequest')
         .doc(userUid)
-        .set(rideInfoMap);
+        .set(riderInfoMap);
   }
 
   cancelRide() async {
